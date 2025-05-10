@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CalorieTracker"
+        tools:targetApi="31">
+        <activity
+            android:name=".AddNutritiousFoodActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <activity
+            android:name=".DailyIntake"
+            android:exported="false"
+            android:label="@string/title_activity_daily_intake"
+            android:theme="@style/Theme.CalorieTracker" />
+        <activity
+            android:name=".FoodList"
+            android:exported="false"
+            android:label="@string/title_activity_food_list"
+            android:theme="@style/Theme.CalorieTracker" />
+        <activity
+            android:name=".AddFoodItem"
+            android:exported="false"
+            android:label="@string/title_activity_add_food_item"
+            android:theme="@style/Theme.CalorieTracker" />
+        <activity
+            android:name=".FoodListDisplay"
+            android:exported="false"
+            android:label="@string/title_activity_food_list_display"
+            android:theme="@style/Theme.CalorieTracker" />
+        <activity
+            android:name=".Register"
+            android:exported="false"
+            android:label="@string/title_activity_register"
+            android:theme="@style/Theme.CalorieTracker" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CalorieTracker">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CalorieTracker</string>
+    <string name="title_activity_food_list">FoodList</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_food_list_display">FoodListDisplay</string>
+    <string name="title_activity_add_food_item">AddFoodItem</string>
+    <string name="title_activity_daily_intake">DailyIntake</string>
+</resources>
